@@ -1,0 +1,30 @@
+{
+  "name": "@aftervolley/ffvb",
+  "version": "0.1.0",
+  "description": "Utils to load documents from the FFVB site",
+  "type": "module",
+  "main": "src/index.js",
+  "module": "src/index.js",
+  "exports": {
+    "default": "./src/index.js"
+  },
+  "files": [
+    "src/**/*.js"
+  ],
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aftervolley/ffvb.git"
+  },
+  "engines": {
+    "node": ">=12"
+  },
+  "author": "Sylvain Lesage <severo@rednegra.net>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/aftervolley/ffvb/issues"
+  },
+  "homepage": "https://github.com/aftervolley/ffvb#readme"
+}
