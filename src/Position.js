@@ -1,5 +1,5 @@
-import { Starter } from "./starter.js";
-import { Substitute } from "./substitute.js";
+import { Starter } from "./Starter.js";
+import { Substitute } from "./Substitute.js";
 
 const POSITION_WIDTH = 19.84;
 
