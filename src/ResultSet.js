@@ -1,8 +1,8 @@
 import { ResultSetTeam } from "./ResultSetTeam.js";
 
-X_SET_NUMBER = 481.88;
-X_SET_DURATION = 504.57;
-X_TOTAL_DURATION = 493.23;
+const X_SET_NUMBER = 481.88;
+const X_SET_DURATION = 504.57;
+const X_TOTAL_DURATION = 493.23;
 
 export class _ResultRow {
   constructor({ parser, yOffset }) {

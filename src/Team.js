@@ -1,8 +1,8 @@
 import { PLAYERS } from "./Constants.js";
 import { Player } from "./Player.js";
 
-X_NAME = 589.95;
-Y_NAME = 328.61;
+const X_NAME = 589.95;
+const Y_NAME = 328.61;
 
 export class Team {
   constructor({ parser, xOffset }) {

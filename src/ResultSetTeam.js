@@ -11,7 +11,7 @@ const RIGHT_CENTERS = {
   P: 521.57,
 };
 
-class ResultSetTeam {
+export class ResultSetTeam {
   constructor({ parser, yOffset, isLeft }) {
     const { T, R, G, P } = isLeft ? LEFT_CENTERS : RIGHT_CENTERS;
     this.timeOuts = parser.createItem({ center: T, middle: yOffset });

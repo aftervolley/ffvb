@@ -1,13 +1,13 @@
 import { SETS } from "./Constants.js";
 import { ResultSet, ResultTotal } from "./ResultSet.js";
 
-X_START_TIME = 447.87;
-X_END_TIME = 493.98;
-X_DURATION = 538.59;
-Y_MIDDLE = 81.99;
-Y_TOTAL = 99;
-Y_SET = 141.52;
-SET_HEIGHT = -8.5;
+const X_START_TIME = 447.87;
+const X_END_TIME = 493.98;
+const X_DURATION = 538.59;
+const Y_MIDDLE = 81.99;
+const Y_TOTAL = 99;
+const Y_SET = 141.52;
+const SET_HEIGHT = -8.5;
 
 export class Result {
   constructor({ parser }) {

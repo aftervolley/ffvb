@@ -1,6 +1,6 @@
 {
   "name": "@aftervolley/ffvb",
-  "version": "0.1.7",
+  "version": "0.1.8",
   "description": "Utils to load documents from the FFVB site",
   "type": "module",
   "main": "src/index.js",
