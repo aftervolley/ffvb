@@ -1,6 +1,7 @@
 import { POSITIONS } from "./Constants.js";
 
 const WIDTH = 9.92;
+const POSITION_WIDTH = WIDTH * 2;
 const HEIGHT = 8.5;
 const LEFT = -9.55;
 const TOP = 461.83;
