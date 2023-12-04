@@ -1,3 +1,5 @@
+import type { Item, Parser } from "./types.js";
+
 import { POSITIONS } from "./Constants.js";
 import { Position } from "./Position.js";
 import { Serve } from "./Serve.js";
@@ -5,7 +7,11 @@ import { Serve } from "./Serve.js";
 const Y_TEAM = 515.69;
 
 export class ScoringSetTeam {
-  constructor({ parser, xOffset, yOffset }) {
+  team: Item;
+  positions: Position[];
+  serve: Serve;
+  
+  constructor({ parser, xOffset, yOffset }: { parser: Parser; xOffset: number; yOffset: number }) {
     this.team = parser.createItem({
       left: xOffset,
       middle: yOffset + Y_TEAM,

@@ -1,5 +1,17 @@
+import type { Item, Parser } from "./types.d.ts";
+
 export class Metadata {
-  constructor({ parser }) {
+  league: Item;
+  hall: Item;
+  city: Item;
+  championship: Item;
+  match: Item;
+  date: Item;
+  ageAndGender: Item;
+  teamLeft: Item;
+  teamRight: Item;
+
+  constructor({ parser }:{ parser: Parser }) {
     this.league = parser.createItem({ left: 14.17, middle: 534.12 });
     this.hall = parser.createItem({ left: 116.22, middle: 545.46 });
     this.city = parser.createItem({ left: 116.22, middle: 553.96 });

@@ -1,3 +1,5 @@
+import type { Item, Parser } from "./types.js";
+
 import { POSITIONS } from "./Constants.js";
 
 const WIDTH = 9.92;
@@ -7,7 +9,9 @@ const LEFT = -9.55;
 const TOP = 461.83;
 
 export class Serve {
-  constructor({ parser, xOffset, yOffset }) {
+  points: Item[];
+  
+  constructor({ parser, xOffset, yOffset }: { parser: Parser; xOffset: number; yOffset: number }) {
     const CENTER_LEFT = xOffset + LEFT;
     const CENTER_RIGHT = CENTER_LEFT + WIDTH;
     const MIDDLE = TOP + yOffset;

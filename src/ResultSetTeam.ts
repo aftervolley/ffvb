@@ -1,3 +1,5 @@
+import type { Item, Parser } from "./types.js";
+
 const LEFT_CENTERS = {
   T: 430.86,
   R: 442.21,
@@ -12,7 +14,12 @@ const RIGHT_CENTERS = {
 };
 
 export class ResultSetTeam {
-  constructor({ parser, yOffset, isLeft }) {
+  timeOuts: Item;
+  substitutions: Item;
+  won: Item;
+  points: Item;
+  
+  constructor({ parser, yOffset, isLeft }: { parser: Parser; yOffset: number; isLeft: boolean }) {
     const { T, R, G, P } = isLeft ? LEFT_CENTERS : RIGHT_CENTERS;
     this.timeOuts = parser.createItem({ center: T, middle: yOffset });
     this.substitutions = parser.createItem({ center: R, middle: yOffset });

@@ -1,18 +1,21 @@
 {
   "name": "@aftervolley/ffvb",
-  "version": "0.1.8",
+  "version": "0.1.9",
   "description": "Utils to load documents from the FFVB site",
   "type": "module",
-  "main": "src/index.js",
-  "module": "src/index.js",
+  "main": "dist/index.js",
+  "module": "dist/index.js",
   "exports": {
-    "default": "./src/index.js"
+    "default": "./dist/index.js"
   },
   "files": [
-    "src/**/*.js"
+    "dist/**/*.js"
   ],
   "scripts": {
-    "test": "mocha"
+    "build": "tsc",
+    "prepublishOnly": "npm run build",
+    "test": "mocha",
+    "tsc": "tsc"
   },
   "repository": {
     "type": "git",
@@ -28,6 +31,10 @@
   },
   "homepage": "https://github.com/aftervolley/ffvb#readme",
   "devDependencies": {
-    "mocha": "^10.2.0"
+    "@types/mocha": "^10.0.6",
+    "assert": "^2.1.0",
+    "mocha": "^10.2.0",
+    "ts-node": "^10.9.1",
+    "typescript": "^5.3.2"
   }
 }

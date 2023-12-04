@@ -1,3 +1,5 @@
+import type { Item, Parser } from "./types.js";
+
 import { SETS } from "./Constants.js";
 import { ResultSet, ResultTotal } from "./ResultSet.js";
 
@@ -10,7 +12,13 @@ const Y_SET = 141.52;
 const SET_HEIGHT = -8.5;
 
 export class Result {
-  constructor({ parser }) {
+  startTime: Item;
+  endTime: Item;
+  duration: Item;
+  total: ResultTotal;
+  sets: ResultSet[];
+  
+  constructor({ parser }: { parser: Parser }) {
     this.startTime = parser.createItem({
       center: X_START_TIME,
       middle: Y_MIDDLE,
