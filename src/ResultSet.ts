@@ -1,4 +1,5 @@
-import type { Item, Parser } from "./types.js";
+import { Item } from "./Item.js";
+import { PDFParser } from "./PDFParser.js";
 
 import { ResultSetTeam } from "./ResultSetTeam.js";
 
@@ -10,7 +11,7 @@ export class _ResultRow {
   teamA: ResultSetTeam;
   teamB: ResultSetTeam;
 
-  constructor({ parser, yOffset }: { parser: Parser; yOffset: number }) {
+  constructor({ parser, yOffset }: { parser: PDFParser; yOffset: number }) {
     this.teamA = new ResultSetTeam({ parser, isLeft: true, yOffset });
     this.teamB = new ResultSetTeam({ parser, isLeft: false, yOffset });
   }
@@ -20,7 +21,7 @@ export class ResultSet extends _ResultRow {
   setNumber: Item;
   duration: Item;
 
-  constructor({ parser, yOffset }: { parser: Parser; yOffset: number }) {
+  constructor({ parser, yOffset }: { parser: PDFParser; yOffset: number }) {
     super({ parser, yOffset });
     this.setNumber = parser.createItem({
       center: X_SET_NUMBER,
@@ -36,7 +37,7 @@ export class ResultSet extends _ResultRow {
 export class ResultTotal extends _ResultRow {
   duration: Item;
 
-  constructor({ parser, yOffset }: { parser: Parser; yOffset: number }) {
+  constructor({ parser, yOffset }: { parser: PDFParser; yOffset: number }) {
     super({ parser, yOffset });
     this.duration = parser.createItem({
       center: X_TOTAL_DURATION,

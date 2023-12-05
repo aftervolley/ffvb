@@ -37,6 +37,7 @@
   },
   "homepage": "https://github.com/aftervolley/ffvb#readme",
   "devDependencies": {
+    "@types/expect": "^24.3.0",
     "@types/mocha": "^10.0.6",
     "@typescript-eslint/eslint-plugin": "^6.13.2",
     "@typescript-eslint/parser": "^6.13.2",
@@ -53,5 +54,8 @@
   "lint-staged": {
     "*.{js,ts}": "eslint --cache --fix",
     "*.{json,js,ts,css,md}": "prettier --write"
+  },
+  "dependencies": {
+    "pdfjs-dist": "^4.0.269"
   }
 }

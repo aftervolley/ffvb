@@ -1,4 +1,5 @@
-import type { Item, Parser } from "./types.js";
+import { Item } from "./Item.js";
+import { PDFParser } from "./PDFParser.js";
 
 import { SETS } from "./Constants.js";
 import { ResultSet, ResultTotal } from "./ResultSet.js";
@@ -18,7 +19,7 @@ export class Result {
   total: ResultTotal;
   sets: ResultSet[];
 
-  constructor({ parser }: { parser: Parser }) {
+  constructor({ parser }: { parser: PDFParser }) {
     this.startTime = parser.createItem({
       center: X_START_TIME,
       middle: Y_MIDDLE,

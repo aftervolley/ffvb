@@ -1,4 +1,5 @@
-import type { Item, Parser } from "./types.js";
+import { Item } from "./Item.js";
+import { PDFParser } from "./PDFParser.js";
 
 import { POSITIONS } from "./Constants.js";
 
@@ -16,7 +17,7 @@ export class Serve {
     xOffset,
     yOffset,
   }: {
-    parser: Parser;
+    parser: PDFParser;
     xOffset: number;
     yOffset: number;
   }) {

@@ -1,4 +1,5 @@
-import type { Item, Parser } from "./types.d.ts";
+import { Item } from "./Item.js";
+import { PDFParser } from "./PDFParser.js";
 
 const PLAYER_HEIGHT = 8.5;
 const X_NUMBER = 578.32;
@@ -16,7 +17,7 @@ export class Player {
     xOffset,
     playerIndex,
   }: {
-    parser: Parser;
+    parser: PDFParser;
     xOffset: number;
     playerIndex: number;
   }) {

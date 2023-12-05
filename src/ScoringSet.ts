@@ -1,5 +1,5 @@
-import type { Item, Parser } from "./types.js";
-
+import { Item } from "./Item.js";
+import { PDFParser } from "./PDFParser.js";
 import { SETS } from "./Constants.js";
 import { ScoringSetTeam } from "./ScoringSetTeam.js";
 
@@ -20,7 +20,7 @@ export class ScoringSet {
     teamLeftSizes,
     teamRightSizes,
   }: {
-    parser: Parser;
+    parser: PDFParser;
     setNumber: number;
     yOffset: number;
     teamLeftSizes: { xOffset: number; width: number };

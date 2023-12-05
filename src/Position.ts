@@ -1,4 +1,4 @@
-import type { Parser } from "./types.js";
+import { PDFParser } from "./PDFParser.js";
 
 import { Starter } from "./Starter.js";
 import { Substitute } from "./Substitute.js";
@@ -15,7 +15,7 @@ export class Position {
     xOffset,
     yOffset,
   }: {
-    parser: Parser;
+    parser: PDFParser;
     positionNumber: number;
     xOffset: number;
     yOffset: number;

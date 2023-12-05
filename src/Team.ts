@@ -1,4 +1,5 @@
-import type { Item, Parser } from "./types.js";
+import { Item } from "./Item.js";
+import { PDFParser } from "./PDFParser.js";
 
 import { PLAYERS } from "./Constants.js";
 import { Player } from "./Player.js";
@@ -10,7 +11,7 @@ export class Team {
   name: Item;
   players: Player[];
 
-  constructor({ parser, xOffset }: { parser: Parser; xOffset: number }) {
+  constructor({ parser, xOffset }: { parser: PDFParser; xOffset: number }) {
     this.name = parser.createItem({ left: xOffset + X_NAME, middle: Y_NAME });
     this.players = PLAYERS.map(
       (i) => new Player({ parser, xOffset, playerIndex: i - 1 }),

@@ -1,4 +1,5 @@
-import type { Item, Parser } from "./types.js";
+import { Item } from "./Item.js";
+import { PDFParser } from "./PDFParser.js";
 
 const LEFT_CENTERS = {
   T: 430.86,
@@ -24,7 +25,7 @@ export class ResultSetTeam {
     yOffset,
     isLeft,
   }: {
-    parser: Parser;
+    parser: PDFParser;
     yOffset: number;
     isLeft: boolean;
   }) {

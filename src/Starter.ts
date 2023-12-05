@@ -1,4 +1,5 @@
-import type { Item, Parser } from "./types.js";
+import { Item } from "./Item.js";
+import { PDFParser } from "./PDFParser.js";
 
 const X_CENTER = -4.59;
 const Y_PLAYER_NUMBER = 495.85;
@@ -13,7 +14,7 @@ export class Starter {
     xOffset,
     yOffset,
   }: {
-    parser: Parser;
+    parser: PDFParser;
     positionNumber: number;
     xOffset: number;
     yOffset: number;
