@@ -15,10 +15,10 @@ export class Position {
     xOffset,
     yOffset,
   }: {
-    parser: Parser,
-    positionNumber: number,
-    xOffset: number,
-    yOffset: number,
+    parser: Parser;
+    positionNumber: number;
+    xOffset: number;
+    yOffset: number;
   }) {
     xOffset = xOffset + (positionNumber - 1) * POSITION_WIDTH;
     this.starter = new Starter({

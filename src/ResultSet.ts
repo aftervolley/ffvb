@@ -35,7 +35,7 @@ export class ResultSet extends _ResultRow {
 
 export class ResultTotal extends _ResultRow {
   duration: Item;
-  
+
   constructor({ parser, yOffset }: { parser: Parser; yOffset: number }) {
     super({ parser, yOffset });
     this.duration = parser.createItem({

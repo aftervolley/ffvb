@@ -17,7 +17,7 @@ export class Result {
   duration: Item;
   total: ResultTotal;
   sets: ResultSet[];
-  
+
   constructor({ parser }: { parser: Parser }) {
     this.startTime = parser.createItem({
       center: X_START_TIME,
@@ -37,7 +37,7 @@ export class Result {
         new ResultSet({
           parser,
           yOffset: Y_SET + (i - 1) * SET_HEIGHT,
-        })
+        }),
     );
   }
 }

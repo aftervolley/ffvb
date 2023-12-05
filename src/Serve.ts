@@ -10,8 +10,16 @@ const TOP = 461.83;
 
 export class Serve {
   points: Item[];
-  
-  constructor({ parser, xOffset, yOffset }: { parser: Parser; xOffset: number; yOffset: number }) {
+
+  constructor({
+    parser,
+    xOffset,
+    yOffset,
+  }: {
+    parser: Parser;
+    xOffset: number;
+    yOffset: number;
+  }) {
     const CENTER_LEFT = xOffset + LEFT;
     const CENTER_RIGHT = CENTER_LEFT + WIDTH;
     const MIDDLE = TOP + yOffset;
@@ -56,7 +64,7 @@ export class Serve {
           parser.createItem({
             center: center + (position - 1) * POSITION_WIDTH,
             middle,
-          })
+          }),
         );
       }
     }

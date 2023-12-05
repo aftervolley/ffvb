@@ -10,8 +10,18 @@ export class Substitute {
   playerNumber: Item;
   pointsAtEntry: Item;
   pointsAtExit: Item;
-  
-  constructor({ parser, positionNumber, xOffset, yOffset }: { parser: Parser, positionNumber: number, xOffset: number, yOffset: number }) {
+
+  constructor({
+    parser,
+    positionNumber,
+    xOffset,
+    yOffset,
+  }: {
+    parser: Parser;
+    positionNumber: number;
+    xOffset: number;
+    yOffset: number;
+  }) {
     const center = xOffset + X_CENTER;
     this.positionNumber = positionNumber;
     this.playerNumber = parser.createItem({

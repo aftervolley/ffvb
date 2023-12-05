@@ -1,4 +1,4 @@
-import {equal} from "assert";
+import { equal } from "assert";
 import { add } from "./index";
 
 describe("index.ts", function () {

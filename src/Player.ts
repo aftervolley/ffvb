@@ -1,4 +1,4 @@
-import type { Item, Parser } from './types.d.ts';
+import type { Item, Parser } from "./types.d.ts";
 
 const PLAYER_HEIGHT = 8.5;
 const X_NUMBER = 578.32;
@@ -11,7 +11,15 @@ export class Player {
   name: Item;
   license: Item;
 
-  constructor({ parser, xOffset, playerIndex }: { parser: Parser, xOffset: number, playerIndex: number }) {
+  constructor({
+    parser,
+    xOffset,
+    playerIndex,
+  }: {
+    parser: Parser;
+    xOffset: number;
+    playerIndex: number;
+  }) {
     const middle = -playerIndex * PLAYER_HEIGHT + Y_MIDDLE;
     this.number = parser.createItem({ left: xOffset + X_NUMBER, middle });
     this.name = parser.createItem({ left: xOffset + X_NAME, middle });

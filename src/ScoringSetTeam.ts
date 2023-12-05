@@ -10,8 +10,16 @@ export class ScoringSetTeam {
   team: Item;
   positions: Position[];
   serve: Serve;
-  
-  constructor({ parser, xOffset, yOffset }: { parser: Parser; xOffset: number; yOffset: number }) {
+
+  constructor({
+    parser,
+    xOffset,
+    yOffset,
+  }: {
+    parser: Parser;
+    xOffset: number;
+    yOffset: number;
+  }) {
     this.team = parser.createItem({
       left: xOffset,
       middle: yOffset + Y_TEAM,
@@ -23,7 +31,7 @@ export class ScoringSetTeam {
           positionNumber,
           xOffset,
           yOffset,
-        })
+        }),
     );
     this.serve = new Serve({ parser, xOffset, yOffset });
   }

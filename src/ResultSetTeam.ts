@@ -18,8 +18,16 @@ export class ResultSetTeam {
   substitutions: Item;
   won: Item;
   points: Item;
-  
-  constructor({ parser, yOffset, isLeft }: { parser: Parser; yOffset: number; isLeft: boolean }) {
+
+  constructor({
+    parser,
+    yOffset,
+    isLeft,
+  }: {
+    parser: Parser;
+    yOffset: number;
+    isLeft: boolean;
+  }) {
     const { T, R, G, P } = isLeft ? LEFT_CENTERS : RIGHT_CENTERS;
     this.timeOuts = parser.createItem({ center: T, middle: yOffset });
     this.substitutions = parser.createItem({ center: R, middle: yOffset });
