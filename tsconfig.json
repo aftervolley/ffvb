@@ -10,6 +10,5 @@
     // Recommended: Compiler complains about expressions implicitly typed as 'any'
     "noImplicitAny": true
   },
-  "include": ["./src/**/*"],
-  "exclude": ["./src/**/*.spec.ts"]
+  "include": ["./src/**/*"]
 }

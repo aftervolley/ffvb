@@ -14,18 +14,21 @@
   ],
   "scripts": {
     "build": "tsc",
-    "format": "prettier --ignore-path .gitignore --write \"**/*.+(js|ts|json)\"",
-    "lint": "eslint --ignore-path .gitignore --ext .js,.ts",
+    "format": "prettier --ignore-path .gitignore --log-level warn --write \"**/*.{json,js,ts,css,md}\"",
+    "lint": "eslint --ignore-path .gitignore --cache --fix --ext .js,.ts,.d.ts src/",
     "prepublishOnly": "npm run build",
+    "pretest": "npm run lint",
     "test": "mocha",
-    "tsc": "tsc"
+    "posttest": "npm run format",
+    "tsc": "tsc",
+    "prepare": "husky install"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/aftervolley/ffvb.git"
   },
   "engines": {
-    "node": ">=12"
+    "node": ">=10"
   },
   "author": "Sylvain Lesage <severo@rednegra.net>",
   "license": "ISC",
@@ -40,9 +43,15 @@
     "assert": "^2.1.0",
     "eslint": "^8.55.0",
     "eslint-config-prettier": "^9.1.0",
+    "husky": "^8.0.3",
+    "lint-staged": "^15.2.0",
     "mocha": "^10.2.0",
     "prettier": "^3.1.0",
     "ts-node": "^10.9.1",
     "typescript": "^5.3.2"
+  },
+  "lint-staged": {
+    "*.{js,ts}": "eslint --cache --fix",
+    "*.{json,js,ts,css,md}": "prettier --write"
   }
 }
